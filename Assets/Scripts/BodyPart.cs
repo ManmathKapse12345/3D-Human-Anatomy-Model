@@ -1,8 +1,8 @@
+// using System.Diagnostics;
 using UnityEngine;
 
 public class BodyPart : MonoBehaviour
 {
-    public Transform zoomPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,7 +11,8 @@ public class BodyPart : MonoBehaviour
 
     void OnMouseDown()
     {
-        Camera.main.GetComponent<ZoomCamera>().ZoomTo(zoomPoint);
+        Debug.Log(gameObject.transform.position);
+        Camera.main.GetComponent<ZoomCamera>().ZoomTo(gameObject);
     }
 
     // Update is called once per frame
