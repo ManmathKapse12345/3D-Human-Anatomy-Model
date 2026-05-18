@@ -1,13 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class ClickManager : MonoBehaviour
 {
     public TMP_Text partText;
+    public RectTransform panel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        panel.gameObject.SetActive(false);
 
     }
 
@@ -28,6 +31,7 @@ public class ClickManager : MonoBehaviour
                 if (bodyPart != null)
                 {
                     Camera.main.GetComponent<ZoomCamera>().ZoomTo(bodyPart.gameObject);
+                    panel.gameObject.SetActive(true);   
                     partText.text = bodyPart.gameObject.name;
                 }
             }
