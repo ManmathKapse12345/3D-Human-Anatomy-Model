@@ -5,17 +5,17 @@ public class ZoomCamera : MonoBehaviour
 {
     // public Camera mainCamera;
     public GameObject targetObject;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 5.0f;
 
 
     // Update is called once per frame
     void Update()
     {
         if(targetObject != null){
-            // Vector3 targetPos = targetObject.transform.position + new Vector3(0.0f,0.0f,-1f);
+            Vector3 targetPosition = targetObject.GetComponent<Collider>().bounds.center + Vector3.forward*-1.0f; 
             transform.position = Vector3.Lerp(
                 transform.position,
-                targetObject.transform.position + new Vector3(0.0f,0.0f,-1f),
+                targetPosition,
                 moveSpeed*Time.deltaTime
             );
         }

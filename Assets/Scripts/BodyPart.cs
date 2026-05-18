@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class BodyPart : MonoBehaviour
 {
+    // private Camera  camera;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
+
 
     void OnMouseDown()
     {
