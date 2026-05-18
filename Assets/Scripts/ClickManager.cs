@@ -1,7 +1,10 @@
 using UnityEngine;
+using TMPro;
 
 public class ClickManager : MonoBehaviour
 {
+    public TMP_Text partText;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +28,7 @@ public class ClickManager : MonoBehaviour
                 if (bodyPart != null)
                 {
                     Camera.main.GetComponent<ZoomCamera>().ZoomTo(bodyPart.gameObject);
+                    partText.text = bodyPart.gameObject.name;
                 }
             }
         }
