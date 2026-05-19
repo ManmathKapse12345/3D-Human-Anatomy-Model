@@ -13,8 +13,8 @@ public class BodyPart : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(gameObject.transform.position);
-        Camera.main.GetComponent<ZoomCamera>().ZoomTo(gameObject);
+        // Debug.Log(gameObject.transform.position);
+        // Camera.main.GetComponent<ZoomCamera>().ZoomTo(gameObject);
     }
 
     // Update is called once per frame

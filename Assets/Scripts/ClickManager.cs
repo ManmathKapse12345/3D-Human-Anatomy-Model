@@ -6,6 +6,7 @@ public class ClickManager : MonoBehaviour
 {
     // public TMP_Text partText;
     public RectTransform panel;
+    // public RectTransform arrowRect;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
