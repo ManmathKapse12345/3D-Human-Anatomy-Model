@@ -28,10 +28,10 @@ public class ClickManager : MonoBehaviour
             {
                 // Debug.Log(hit.collider.gameObject.name);
                 // GameObject clickedObject = hit.collider;
-                BodyPart bodyPart = hit.collider.GetComponent<BodyPart>();
-                if (bodyPart != null)
+                Collider bodyPartCollider = hit.collider.GetComponent<Collider>();
+                if (bodyPartCollider != null)
                 {
-                    Camera.main.GetComponent<ZoomCamera>().ZoomTo(bodyPart.gameObject);
+                    Camera.main.GetComponent<ZoomCamera>().ZoomTo(bodyPartCollider.gameObject);
                     Camera.main.GetComponent<ZoomCamera>().PutLabel(panel);
                     // panel.gameObject.SetActive(true);   
                     // partText.text = bodyPart.gameObject.name;
